@@ -12,16 +12,8 @@ the [Angular CLI](https://cli.angular.io/). To run the project, you'll need
 
 ## Getting Started
 Before starting the Explorer app, have the API running locally.
+go there to run API part:-[IoT-Chain](https://github.com/InfoScienceLabs/IoT-Chain)
 
-Once this is up and running, start the explorer container and rest api proxy
-container: `docker-compose up`
-
-By default, the sawtooth API proxy is available at port `8090`,
-so the `apiUrl` is already set to `http://localhost:8090`. To change where the
-explorer connects to the rest api, change the value of `apiUrl` in
-`environments/environments.ts`.
-
-The minified and compiled web assets are also served at `http://localhost:8091`.
 
 ## Local development
 The `explorer` container is where you'll perform most development related
