@@ -1,0 +1,36 @@
+<div class="well">
+   <dl class="horizontal">
+      <hr>
+      <dt>Transaction List</dt>
+      <ng-container *ngIf="data.txid.length"> <br>
+         <dd>
+            <ul list-style-position="outside" class="input-output-list">
+               <li *ngFor="let txid of data.txid" class="ellipsis">
+                  <a routerLink="/transactions/{{txid}}">{{ txid }}</a>
+               </li>
+            </ul>
+         </dd>
+      </ng-container>
+      <ng-container *ngIf="!data.txid.length">
+         <dd> User does not have any transactions right now</dd>
+      </ng-container>
+      <hr>
+
+      <dt>Device List</dt>
+      <ng-container *ngIf="data.device_hash.length"> <br>
+         <dd>
+            <ul list-style-position="outside" class="input-output-list">
+               <li *ngFor="let device_hash of data.device_hash" class="ellipsis">
+                  <a routerLink="/devices/{{device_hash}}">{{ device_hash }}</a>
+               </li>
+            </ul>
+         </dd>
+      </ng-container>
+      <ng-container *ngIf="!data.device_hash.length">
+         <dd> User does not have any Devices right now</dd>
+      </ng-container>
+      <hr>
+
+   </dl>
+</div>
+<hr>

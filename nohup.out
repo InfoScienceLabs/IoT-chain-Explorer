@@ -1,0 +1,21 @@
+Your global Angular CLI version (8.1.1) is greater than your local
+version (1.7.4). The local Angular CLI version is used.
+
+To disable this warning use "ng config -g cli.warnings.versionMismatch false".
+** NG Live Development Server is listening on 0.0.0.0:4000, open your browser on http://localhost:4000/ **
+[0mDate: [1m[37m2019-07-16T16:52:27.048Z[39m[22m[0m
+[0mHash: [1m[37m915e853f4d828c480727[39m[22m[0m
+[0mTime: [1m[37m19116[39m[22mms[0m
+[0mchunk {[1m[33minline[39m[22m} [1m[32minline.bundle.js[39m[22m (inline) 3.85 kB [1m[33m[entry][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain.bundle.js[39m[22m (main) 718 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mpolyfills[39m[22m} [1m[32mpolyfills.bundle.js[39m[22m (polyfills) 606 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mstyles[39m[22m} [1m[32mstyles.bundle.js[39m[22m (styles) 464 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mvendor[39m[22m} [1m[32mvendor.bundle.js[39m[22m (vendor) 16.8 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2019-07-16T17:02:19.176Z[39m[22m - Hash: [1m[37mb518cfc3688b072913a7[39m[22m - Time: [1m[37m1991[39m[22mms[0m
+[0m4 unchanged chunks[0m
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain.bundle.js[39m[22m (main) 718 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.

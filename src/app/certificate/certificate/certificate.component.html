@@ -1,0 +1,37 @@
+<div class="well">
+  <dl class="horizontal">
+    <hr>
+    <dt>Certificate Id: </dt>
+    <dd><a routerLink="/certificates/{{data.certificate}}">{{ data.certificate || '-'}}</a></dd>
+    <hr>
+    
+    <dt>Owner</dt>
+    <ul class="input-output-list">
+      <li *ngFor="let owner of data.owner" class="ellipsis">
+        <a routerLink="/users/{{ owner }}">{{ owner }}</a><br />
+      </li>
+    </ul>
+    <hr>
+
+    <dt>Property Id:</dt>
+    <dd><a routerLink="/properties/{{data.propId}}">{{ data.propId || '-' }}</a></dd>
+    <hr>
+
+    <dt>Transactions List: </dt> <br>
+      <dd>
+         <ul list-style-position="outside" class="input-output-list">
+            <li *ngFor="let transactionList of data.transactionList" class="ellipsis">
+               <a routerLink="/transactions/{{transactionList}}">{{ transactionList || '-' }}</a><br />
+            </li>
+         </ul>
+      </dd>
+    <hr>
+    
+    <ng-container *ngIf="!data.valid">
+      <dd>This certificate is expired</dd>
+    </ng-container>
+
+  </dl>
+</div>
+
+<hr />

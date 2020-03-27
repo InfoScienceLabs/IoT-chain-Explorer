@@ -1,0 +1,37 @@
+<div class="well" *ngIf="data.contract">
+  <dl class="horizontal">
+    <dt>Contract</dt>
+    <dd><a routerLink="/contracts/{{ data.contract }}">{{ data.contract || '-' }}</a></dd>
+    <hr>
+<!-- 
+    <dt>Certificate Id: </dt>
+    <dd><a routerLink="/certificate/{{ data.certificate }}">{{ data.certificate || '-'}}</a></dd> -->
+
+    <dt>Transfer From:</dt> <br>
+    <ul class="input-output-list">
+      <li align="center" *ngFor="let seller of data.seller" class="ellipsis" >
+        <a routerLink="/users/{{seller}}">{{ seller }}</a><br />
+      </li>
+    </ul>
+    <hr>
+
+    <dt>Transfer To:</dt> <br>
+    <ul class="input-output-list">
+      <li align="center" *ngFor="let buyer of data.buyer" class="ellipsis">
+        <a routerLink="/users/{{buyer}}">{{buyer}}</a><br />
+      </li>
+    </ul>
+    <hr>
+
+    <dt>Property Id:</dt>
+    <dd><a routerLink="/properties/{{ data.propId }}">{{ data.propId || '-' }}</a></dd>
+    <hr>
+
+    <dt>Transaction Id:</dt>
+    <dd><a routerLink="/transactions/{{ data.transactionId }}">{{ data.transactionId || '-' }}</a></dd>
+  <hr>
+
+  </dl>
+</div>
+
+<hr />

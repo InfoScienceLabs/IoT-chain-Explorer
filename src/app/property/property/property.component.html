@@ -1,0 +1,106 @@
+<div class="well">
+  <dl class="horizontal">
+    <hr>
+    <dt>Property Id: </dt>
+    <dd><a routerLink="/properties/{{data.propId}}">{{ data.propId }}</a></dd><br />
+    <hr>
+
+    <dt>Property created at: </dt>
+    <dd>{{ data.timeStamp || '-' }}</dd><br />
+    <hr>
+
+    <dt>Owner Id(s): </dt> <br>
+    <dd>
+      <ul list-style-position="outside" class="input-output-list">
+        <li *ngFor="let owner of data.owner" class="ellipsis">
+          <a routerLink="/users/{{ owner }}">{{ owner }}</a><br />
+        </li>
+      </ul>
+    </dd>
+    <hr>
+
+    <dt>Certificate Id:</dt>
+    <ng-container *ngIf="data.certificate">
+      <dd><a routerLink="/certificates/{{ data.certificate }}">{{ data.certificate}}</a></dd>
+    </ng-container>
+    <ng-container *ngIf="!data.certificate">
+      <dd>Property not Listed yet</dd>
+    </ng-container>
+    <br />
+    <hr>
+
+    <dt>Contract Id:</dt>
+    <ng-container *ngIf="data.contract">
+      <dd><a routerLink="/contracts/{{ data.contract }}">{{ data.contract}}</a></dd>
+    </ng-container>
+    <ng-container *ngIf="!data.contract">
+      <dd>Property not transferred yet</dd>
+    </ng-container>
+    <br />
+    <hr>
+
+    <dt>Transactions List: </dt> <br>
+    <dd>
+      <ul list-style-position="outside" class="input-output-list">
+        <li *ngFor="let transactionList of data.transactionList" class="ellipsis">
+          <a routerLink="/transactions/{{ transactionList }}">{{ transactionList }}</a><br />
+        </li>
+      </ul>
+    </dd>
+  </dl>
+</div>
+
+<hr />
+
+<h3 class="h3">
+  Previous Details
+</h3>
+<div class="well">
+  <dl class="horizontal">
+    <dt>Previous Owners</dt>
+    <ng-container *ngIf="data.prevOwnerList "> <br>
+      <dd>
+        <ul class="input-output-list">
+          <li *ngFor="let prevOwnerList of data.prevOwnerList" class="ellipsis">
+            <a routerLink="/users/{{ prevOwnerList }}">{{ prevOwnerList}}</a><br />
+          </li>
+        </ul>
+      </dd>
+    </ng-container>
+    <ng-container *ngIf="!data.prevOwnerList">
+      <dd>There is no previous Owner Data to display</dd>
+    </ng-container>
+    <br>
+    <dt>Previous Certificates</dt>
+    <ng-container *ngIf="data.prevCertList"> <br>
+      <dd>
+        <ul class="input-output-list">
+          <li *ngFor="let prevCertList of data.prevCertList" class="ellipsis">
+            <a routerLink="/certificates/{{ prevCertList }}">{{ prevCertList }}</a><br />
+          </li>
+        </ul>
+      </dd>
+    </ng-container>
+    <ng-container *ngIf="!data.prevCertList">
+      <dd>There is no previous Certificate Data to display</dd>
+    </ng-container>
+    <br>
+
+    <dt>Previous Contracts</dt>
+    <ng-container *ngIf="data.prevContractList"> <br>
+      <dd>
+        <ul class="input-output-list">
+          <li *ngFor="let previousContract of data.previousContract" class="ellipsis">
+            <a routerLink="/contracts/{{previousContract}}">{{ previousContract }}</a><br />
+          </li>
+        </ul>
+      </dd>
+    </ng-container>
+    <ng-container *ngIf="!data.prevContractList">
+      <dd>There is no previous Contract Data to display</dd>
+    </ng-container>
+
+
+  </dl>
+</div>
+<hr />

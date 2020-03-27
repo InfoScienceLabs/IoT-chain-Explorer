@@ -1,0 +1,54 @@
+<div class="well" *ngIf="data">
+  <dl class="horizontal">
+    <dt>Device</dt>
+    <dd><a routerLink="/devices/{{ data.device_hash }}">{{ data.device_hash || '-' }}</a></dd>
+    <hr>
+
+    <ng-container *ngIf="data.owner_hash"> <br>
+      <dt>Owner Hash</dt>
+      <dd>
+        {{ data.owner_hash }}
+      </dd>
+      <hr>
+    </ng-container>
+    <!-- <ng-container *ngIf="!data.owner_hash"> <br>
+      <dd> Device has no Owners </dd>
+    </ng-container> -->
+
+
+
+    <dt>Transaction List</dt>
+    <ng-container *ngIf="data.txid.length"> <br>
+      <dd>
+        <ul list-style-position="outside" class="input-output-list">
+          <li *ngFor="let txid of data.txid" class="ellipsis">
+            <a routerLink="/transactions/{{txid}}">{{ txid }}</a>
+          </li>
+        </ul>
+      </dd>
+    </ng-container>
+    <ng-container *ngIf="!data.txid.length"> <br>
+      <dd> Device has no Transactions </dd>
+    </ng-container>
+
+
+    <hr>
+
+    <dt>User List</dt>
+    <ng-container *ngIf="data.user_hash.length"> <br>
+      <dd>
+        <ul list-style-position="outside" class="input-output-list">
+          <li *ngFor="let user_hash of data.user_hash" class="ellipsis">
+            <a routerLink="/users/{{user_hash}}">{{ user_hash }}</a>
+
+          </li>
+        </ul>
+      </dd>
+    </ng-container>
+    <ng-container *ngIf="!data.user_hash.length"> <br>
+      <dd> Device has no Users </dd>
+    </ng-container>
+
+    <hr>
+  </dl>
+</div>

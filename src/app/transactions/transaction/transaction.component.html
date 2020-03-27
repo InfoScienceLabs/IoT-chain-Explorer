@@ -1,0 +1,44 @@
+<div class="well">
+  <dl class="horizontal">
+    <hr>
+   
+    <!-- <dd><a routerLink="/transactions/{{data.transactionId}}">{{ data.txid || '-'}}</a></dd> -->
+  
+   <dt>Device Hash: </dt>
+    <dd><a routerLink="/devices/{{data.asset.device_hash}}">{{ data.asset.device_hash || '-'}}</a></dd> 
+    <hr>
+
+  
+    <ng-container *ngIf="data.asset.created_at">    
+    <dt>Created At:</dt>
+    <dd>{{ data.asset.created_at | date :'full' || '-' }}</dd>
+    <hr>
+    </ng-container>
+
+    <ng-container *ngIf="data.asset.device_time">    
+      <dt>Device Time:</dt>
+      <dd>{{ data.asset.device_time | date :'full' || '-' }}</dd>
+      <hr>
+      </ng-container>
+
+    <dt>Type:</dt>
+    <dd>{{ data['asset']['type_check'] || '-' }}</dd>
+    <hr>
+
+    
+    <ng-container  *ngIf="data.asset.type_check && data.asset.type_check == 'device create'">
+    <dt>Owner Hash:</dt>
+    <dd>{{ data.asset.user_hash || '-' }}</dd>
+    <hr>
+    </ng-container>
+
+    <ng-container  *ngIf="data.asset.type_check && (data.asset.type_check == 'checkout' || data.asset.type_check == 'checkin')">
+      <dt>User Hash:</dt>
+      <dd><a routerLink="/users/{{data.asset.user_hash}}">{{ data.asset.user_hash || '-' }}</a></dd>
+      <hr>
+    </ng-container>
+     
+  </dl> 
+</div>
+
+<hr />
