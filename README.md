@@ -1,19 +1,17 @@
-# SawtoothExplorer
+# IoT-Chain-Explorer
 
-SawtoothExplorer is an application that provides visibility into the Sawtooth
+IoT-chain-Explorer is an application that provides visibility into the 
 Blockchain for Node Operators.
 
 ## Dependencies
 
-SawtoothExplorer is built using [Angular](https://angular.io/) and
+Explorer is built using [Angular](https://angular.io/) and
 [Angular Material](https://material.angular.io/). The project is managed using
 the [Angular CLI](https://cli.angular.io/). To run the project, you'll need
 [Docker](https://docker/com).
 
 ## Getting Started
-Before starting the SawtoothExplorer app, have the API running locally.
-Instructions for doing so are available in the Sawtooth documentation,
-under [Installing and Running Sawtooth](https://sawtooth.hyperledger.org/docs/core/releases/latest/app_developers_guide/installing_sawtooth.html).
+Before starting the Explorer app, have the API running locally.
 
 Once this is up and running, start the explorer container and rest api proxy
 container: `docker-compose up`
